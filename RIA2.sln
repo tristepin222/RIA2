@@ -5,6 +5,8 @@ VisualStudioVersion = 17.9.34607.119
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Analyser.API", "Analyser.API\Analyser.API.csproj", "{23551EFE-5481-4267-B47C-441272036B73}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataObject.API", "DataObject.API\DataObject.API.csproj", "{99272262-DB44-49B2-A1DA-17C3787D5120}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{23551EFE-5481-4267-B47C-441272036B73}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{23551EFE-5481-4267-B47C-441272036B73}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{23551EFE-5481-4267-B47C-441272036B73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99272262-DB44-49B2-A1DA-17C3787D5120}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99272262-DB44-49B2-A1DA-17C3787D5120}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99272262-DB44-49B2-A1DA-17C3787D5120}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99272262-DB44-49B2-A1DA-17C3787D5120}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
