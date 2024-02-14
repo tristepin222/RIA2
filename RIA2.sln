@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34607.119
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Analyser.API", "Analyser.API\Analyser.API.csproj", "{23551EFE-5481-4267-B47C-441272036B73}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{23551EFE-5481-4267-B47C-441272036B73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23551EFE-5481-4267-B47C-441272036B73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23551EFE-5481-4267-B47C-441272036B73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23551EFE-5481-4267-B47C-441272036B73}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D9F1673A-3FE6-4A51-A176-9198CCB57F84}
+	EndGlobalSection
+EndGlobal
