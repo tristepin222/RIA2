@@ -12,7 +12,7 @@ namespace Analyser.API
     {
         // POST api/<AnalyserController>
         [HttpPost]
-        public async Task<IImageData> Post([FromBody] ImageParams data)
+        public async Task<IImageData> Post([FromBody] AnalyserParam data)
         {
             GoogleLabelDetectorImpl analyser = new GoogleLabelDetectorImpl();
             return await analyser.Analyze(data.RemoteFullPath, data.MaxLabels, data.MinConfidenceLevel);

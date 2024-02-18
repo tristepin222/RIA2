@@ -1,6 +1,6 @@
 ﻿namespace Analyser.API.Models
 {
-    public class ImageParams
+    public class AnalyserParam
     {
         public string RemoteFullPath { get; set; }
         public int MaxLabels { get; set; }
