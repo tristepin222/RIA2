@@ -1,17 +1,16 @@
 ﻿using DataObject.API.Exceptions;
+using Google.Apis.Auth.OAuth2;
 using Google.Cloud.Storage.V1;
 
 namespace DataObject.API.Services
 {
     public class GoogleDataObjectImpl : IDataObject
     {
-        private string bucketName;
+        private static string bucketName;
 
-        public GoogleDataObjectImpl(string bucketName)
-        {
-            this.bucketName = bucketName;
-        }
-        public async Task<bool> DoesExists(string remoteFullPath)
+        public static string BucketName { set { bucketName = value; } }
+
+        public static async Task<bool> DoesExists(string remoteFullPath)
         {
             var storage = StorageClient.Create();
             try
@@ -33,7 +32,7 @@ namespace DataObject.API.Services
             }
         }
 
-        public async Task Download(string remoteFullPath, string localFullPath = "")
+        public static async Task Download(string remoteFullPath, string localFullPath = "")
         {
             if (await DoesExists(remoteFullPath))
             {
@@ -48,7 +47,7 @@ namespace DataObject.API.Services
             }
         }
 
-        public async Task<string> Publish(string remoteFullPath, int expirationTime = 90)
+        public static async Task<string> Publish(string remoteFullPath, int expirationTime = 90)
         {
             if (await DoesExists(remoteFullPath))
             {
@@ -65,7 +64,7 @@ namespace DataObject.API.Services
             }
         }
 
-        public async Task Remove(string remoteFullPath, bool recursive = false)
+        public static async Task Remove(string remoteFullPath, bool recursive = false)
         {
             var storage = StorageClient.Create();
             if (recursive)
@@ -85,7 +84,7 @@ namespace DataObject.API.Services
             }
         }
 
-        public async Task Upload(string file, string remoteFullPath)
+        public static async Task Upload(string file, string remoteFullPath)
         {
             var storage = StorageClient.Create();
             using var fileStream = File.OpenRead(file);
