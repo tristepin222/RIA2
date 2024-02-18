@@ -5,6 +5,8 @@ VisualStudioVersion = 17.9.34607.119
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Analyser.API", "Analyser.API\Analyser.API.csproj", "{23551EFE-5481-4267-B47C-441272036B73}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gateway.API", "Gateway.API\Gateway.API.csproj", "{EDDC2B15-8632-4F3E-BA6B-8CC89C927287}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{23551EFE-5481-4267-B47C-441272036B73}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{23551EFE-5481-4267-B47C-441272036B73}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{23551EFE-5481-4267-B47C-441272036B73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDDC2B15-8632-4F3E-BA6B-8CC89C927287}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDDC2B15-8632-4F3E-BA6B-8CC89C927287}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDDC2B15-8632-4F3E-BA6B-8CC89C927287}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDDC2B15-8632-4F3E-BA6B-8CC89C927287}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
