@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
 
+using DataObject.API.Models;
 namespace DataObject.API.Controllers
 {
     public class DataObjectController
@@ -12,15 +13,16 @@ namespace DataObject.API.Controllers
         {
 
             [HttpPost]
-            public async void Upload([FromBody] ImageParams data)
+            public async void Upload([FromBody] DataObjectParam data)
             {
-                await GoogleDataObjectImpl.Upload(data.localFullPath, data.remoteFullPath);
+
+                await GoogleDataObjectImpl.Upload(data.LocalFullPath, data.RemoteFullPath);
             }
 
             [HttpPost]
-            public async Task<string> Publish([FromBody] ImageParams data)
+            public async Task<string> Publish([FromBody] DataObjectParam data)
             {
-                return await GoogleDataObjectImpl.Publish(data.remoteFullPath, data.expirationTime);
+                return await GoogleDataObjectImpl.Publish(data.RemoteFullPath, data.ExpirationTime);
             }
 
         }
