@@ -71,7 +71,6 @@
     "preset": "@vue/cli-plugin-unit-jest"
   },
   "cypress-cucumber-preprocessor": {
-    "nonGlobalStepDefinitions": true,
     "stepDefinitions": "tests/e2e/specs"
   }
 }

@@ -1,23 +1,40 @@
 // eslint-disable-next-line no-unused-vars
 const { Given, When, Then } = require("cypress-cucumber-preprocessor/steps");
 
-function click_button(n = 1, fast = true) {
-  // eslint-disable-next-line for-direction
-  cy.get("button").should('countains.text', "Analyse").as("analyse_button");
-  if (fast) {
-    for (let i = 0; i < n; i++) {
-      cy.get("@analyse_button").click();
-    }
-  } else {
-    for (let i = 0; i < n; i++) {
-      cy.wait(2001).get("@analyse_button").click();
-    }
-  }
+function GetButton(){
+  return cy.get("button").should('contains.text', "Analyse").as("analyse_button");
 }
+
+function ClickButton() {
+  // eslint-disable-next-line for-direction
+  GetButton();
+  cy.get("@analyse_button").click();
+  
+}
+
+function GetArea() {
+  return cy.get("textarea").as("text_area").should("not.have.value", "");
+}
+
 before(function () {
   cy.visit("/");
 });
 
+Given("The button is enabled", function (){
+});
+
+Given("The button is disabled", function (){
+
+});
+
 When("I click on the button", function () {
-  click_button();
+  ClickButton();
+});
+
+Then("The result text area will show informations", function (){
+  GetArea();
+});
+
+Then("Nothing happens", function (){
+
 });
