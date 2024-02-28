@@ -1,14 +1,17 @@
 <template>
+  <LanguageList />
   <ImageForm />
 </template>
 
 <script>
-import ImageForm from "./components/ImageForm.vue";
+import ImageForm from "./components/ImageForm";
+import LanguageList from "./components/LanguageList";
 
 export default {
   name: "App",
   components: {
     ImageForm,
+    LanguageList,
   },
 };
 </script>
