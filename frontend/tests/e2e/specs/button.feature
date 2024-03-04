@@ -1,14 +1,14 @@
-Feature: The analyse button
+Feature: E2e tests
   The webpage consits of one button, that upon clicking, will ask the backend to analyse the image and store it on a bucket
 
-  Scenario: I press the button when it's enabled
+  Scenario: Default values - Good format image
     # when the button is enabled, it means an image as been selected
-    Given The button is enabled
-    When I click on the button
-    Then The result text area will show informations
+    Given The form is loaded # default values are displayed
+    When I drag an drop a file # send form
+    Then The result text area will show informations # only the response zone is updated
 
-  Scenario: I press the button when it's disabled
+  Scenario: Multilanguages
     # when the button is disabled, it means an image as not been selected yet
-    Given The button is disabled
-    When I click on the button 
-    Then Nothing happens
+    Given The form is loaded
+    When Check GUI language
+    Then Language is updated # without reloading the page

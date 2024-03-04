@@ -2,45 +2,19 @@
 const { Given, When, Then } = require("cypress-cucumber-preprocessor/steps")
 require ("cypress-file-upload")
 
-function UploadImage(){
-  cy.fixture('example.jpg').then((fileContent) => {
-    cy.get('input[name="file-input"]').attachFile({
-      fileContent: fileContent.toString(),
-      fileName: 'example.jpg',
-      mimeType: 'image/jpeg'
-    })
-  })
-}
-
-function GetButton(){
-  return cy.get("button").should('contains.text', "Analyse").as("analyse_button")
-}
-
-function ClickButton() {
-  // eslint-disable-next-line for-direction
-  GetButton();
-  cy.get("@analyse_button").click()
-  
-}
-
-function GetArea() {
-  return cy.get("textarea").as("text_area").should("not.have.value", "")
-}
-
 before(function () {
   cy.visit("/")
 });
 
-Given("The button is enabled", function (){
-  UploadImage()
-  GetButton().should("not.be.disabled")
+Given("The form is loaded", function (){
+  cy.get("form").should("be.visible")
 });
 
-Given("The button is disabled", function (){
+Given("I drag an drop a file", function (){
   GetButton().should("be.disabled")
 });
 
-When("I click on the button", function () {
+When("Check GUI language", function () {
   ClickButton()
 });
 
@@ -48,6 +22,6 @@ Then("The result text area will show informations", function (){
   GetArea()
 });
 
-Then("Nothing happens", function (){
+Then("Language is updated", function (){
 
 });
