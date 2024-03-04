@@ -1,0 +1,30 @@
+[
+  { 
+		"name": "yeti",
+		"labels": [
+			"smile",
+			"tree",
+			"head"
+		],
+		"confidences": [
+			"89",
+			"78",
+			"97"
+		],
+		"path": "images/yeti.png"
+	},
+	{ 
+		"name": "rainbow",
+		"labels": [
+			"rainbown",
+			"lobster",
+			"gold"
+		],
+		"confidences": [
+			"23",
+			"45",
+			"65"
+		],
+		"path": "images/rainbow.jpeg"
+	}
+]
